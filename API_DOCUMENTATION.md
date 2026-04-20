@@ -335,6 +335,25 @@ Returns list of all orders with the specified status.
 
 ---
 
+## Model Context Protocol (MCP) - GitHub Tools
+This project acts as an MCP server providing GitHub integration tools.
+
+### MCP Endpoint
+**SSE URL**: `/mcp/messages` (PermitAll)
+
+### Available GitHub Tools
+1. **listMyRepositories**: List all repositories for the authenticated user.
+2. **getRepositoryDetails**: Get repository details by owner and name.
+   - Parameters: `owner` (string), `repo` (string)
+
+### Configuration
+MCP tools use the token provided in `application.properties`:
+```properties
+github.token=ghp_...
+```
+
+---
+
 ## Enum Values
 
 ### OrderStatus
